@@ -1,31 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/bluebg"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    android:background="@drawable/bluebg">
 
-
-    <ImageView
-        android:id="@+id/Back_Image_view"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_alignParentLeft="true"
-        android:src="@drawable/baseline_keyboard_backspace_24" />
+        android:layout_marginRight="10dp"
+        android:layout_gravity="top"
+        android:gravity="top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/Back_Image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/baseline_keyboard_backspace_24" />
 
 
+        <ImageView
 
-    <ImageView
-        android:layout_margin="4dp"
-        android:id="@+id/setting_Image_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        app:srcCompat="@drawable/baseline_settings_24" />
+            android:id="@+id/setting_Image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="4dp"
+            app:srcCompat="@drawable/baseline_settings_24" />
 
+    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/root_layout"
@@ -33,35 +49,41 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
         tools:context=".MainActivity">
-
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="30dp"
-            android:layout_marginBottom="50dp">
+            android:layout_marginBottom="30dp">
 
 
             <RelativeLayout
                 android:id="@+id/player_x_cons"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
-                android:layout_marginBottom="5dp"
                 android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
                 android:layout_weight="1"
 
 
-                android:background="@drawable/red_background">
+                android:background="@drawable/restart_background">
 
                 <ImageView
                     android:id="@+id/imageView3"
-                    android:layout_marginTop="4dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
                     android:contentDescription="Player 1"
                     app:srcCompat="@drawable/baseline_account_circle_24" />
 
@@ -69,9 +91,9 @@
                     android:id="@+id/player_X_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
                     android:layout_alignParentBottom="true"
                     android:layout_centerInParent="true"
+                    android:layout_marginBottom="4dp"
                     android:fontFamily="@font/aclonica"
                     android:text="Player X  :0"
                     android:textColor="@color/white"
@@ -86,15 +108,14 @@
                 android:layout_height="70dp"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/yellow_obesity_background"
-                >
+                android:background="@drawable/yellow_obesity_background">
 
                 <ImageView
                     android:id="@+id/robotiv"
-                    android:layout_marginTop="4dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
                     android:contentDescription="Player 2"
                     app:srcCompat="@drawable/baseline_account_circle_24" />
 
@@ -102,10 +123,10 @@
                     android:id="@+id/Player_O_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
                     android:layout_alignBottom="@id/robotiv"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="4dp"
                     android:fontFamily="@font/aclonica"
                     android:text="Player O  :0"
                     android:textColor="@color/white"
@@ -116,7 +137,6 @@
 
 
         </LinearLayout>
-
 
 
         <TextView
@@ -157,7 +177,9 @@
                     android:fontFamily="@font/aclonica"
                     android:onClick="Check"
                     android:textSize="52sp"
-                    app:cornerRadius="12dp" />
+                    app:cornerRadius="12dp"
+                    android:contentDescription="Button 1"
+                    />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn2"
@@ -253,24 +275,6 @@
 
             </GridLayout>
 
-            <ImageView
-                android:id="@+id/line_imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:visibility="invisible"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.5"
-
-                >
-
-
-            </ImageView>
-
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -333,8 +337,22 @@
             android:textSize="34sp"
             android:visibility="invisible" />
 
+
     </LinearLayout>
 
+
+<!--    <com.google.android.gms.ads.AdView-->
+<!--        android:id="@+id/adView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        app:adSize="BANNER"-->
+<!--        app:adUnitId="ca-app-pub-3940256099942544/6300978111"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
+<!--    </com.google.android.gms.ads.AdView>-->
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/win_animation"
@@ -342,18 +360,15 @@
         android:layout_height="match_parent"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
         app:lottie_rawRes="@raw/win_animation" />
 
 
-<!--    <com.google.android.gms.ads.AdView-->
-<!--        xmlns:ads="http://schemas.android.com/apk/res-auto"-->
-<!--        android:id="@+id/adView"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        ads:adSize="BANNER"-->
-<!--        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">-->
-<!--    </com.google.android.gms.ads.AdView>-->
+</androidx.constraintlayout.widget.ConstraintLayout>
 
-</RelativeLayout>
+<!--11 34  to 12 26-->
+

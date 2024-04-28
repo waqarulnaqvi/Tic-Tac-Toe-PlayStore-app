@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/popup_volume"
+        android:title="sound"
+
+        />
+
+    <item
+        android:id="@+id/popup_support"
+        android:title="support" />
+
+    <item
+        android:id="@+id/popup_feedback"
+        android:title="mail" />
+
+    <item
+        android:id="@+id/popup_exit"
+        android:title="exit" />
+
+
+</menu>

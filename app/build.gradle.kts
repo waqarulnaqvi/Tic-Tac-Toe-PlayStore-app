@@ -50,10 +50,7 @@ android {
 
 dependencies {
 
-//    implementation ("com.google.android.gms:play-services-ads:latest_version")
-//    implementation ("com.google.android.gms:play-services-ads:22.6.0")
-//    implementation ("com.google.android.gms:play-services-ads:22.6.1") // Use the latest available version
-
+    implementation ("com.google.android.gms:play-services-ads:23.0.0")
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 
@@ -65,4 +62,5 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
+//7 59 to 8 52
 

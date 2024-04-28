@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- res/values/styles.xml -->
+<?xml version="1.0" encoding="utf-8"?><!-- res/values/styles.xml -->
 <resources>
-
     <style name="PopupMenuStyle" parent="@android:style/Widget.PopupMenu">
-        <item name="android:popupBackground">@drawable/main_button</item> <!-- Set your desired background drawable -->
+        <item name="android:popupBackground">@drawable/main_button
+        </item> <!-- Set your desired background drawable -->
     </style>
 
+    <style name="MyDialogStyle" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowMinWidthMinor">75%</item>
+    </style>
 </resources>
+

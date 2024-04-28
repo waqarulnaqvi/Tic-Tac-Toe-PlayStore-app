@@ -25,7 +25,7 @@ public class SplashScreen extends AppCompatActivity {
 //            {
 //                try {
 ////                    To give delay in finally
-//                    sleep(2500);//2 second
+//                    sleep(1000);//2 second
 //                }
 //                catch (Exception e)
 //                {
@@ -34,6 +34,8 @@ public class SplashScreen extends AppCompatActivity {
 //                finally {
 //                    Intent intent =new Intent(SplashScreen.this,StartGame.class);
 //                    startActivity(intent);
+//                finish();
+//
 //                }
 //            }
 //
@@ -41,11 +43,12 @@ public class SplashScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                finishAffinity();
                 Intent intent =new Intent(SplashScreen.this,StartGame.class);
                 startActivity(intent);
+                finish();
+
             }
-        }, 800); // 3000 milliseconds (3 seconds)
+        }, 1000); // 3000 milliseconds (3 seconds)
     }
 
 }

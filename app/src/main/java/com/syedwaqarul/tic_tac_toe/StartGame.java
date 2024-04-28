@@ -1,5 +1,6 @@
 package com.syedwaqarul.tic_tac_toe;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
@@ -7,6 +8,12 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 //import com.google.android.gms.ads.MobileAds;
 //
@@ -22,16 +29,17 @@ public class StartGame extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_game);
         getWindow().setStatusBarColor(ContextCompat.getColor(StartGame.this, R.color.blue));//Change the status bar color
-//        MobileAds.initialize(this);
+//        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+//            @Override
+//            public void onInitializationComplete(@NonNull InitializationStatus initializationStatus) {
+//
+//            }
+//        });
 
-//        AdView mAdView1 = findViewById(R.id.adView1);
+//        Ads
+//        AdView mAdView1 = findViewById(R.id.adView);
 //        AdRequest adRequest = new AdRequest.Builder().build();
 //        mAdView1.loadAd(adRequest);
-//
-//        AdView  mAdView2 = findViewById(R.id.adView2);
-//        AdRequest adRequest1 = new AdRequest.Builder().build();
-//        mAdView2.loadAd(adRequest1);
-//        run=getIntent().getStringExtra("Run");
 
 //        if(run!=null) {
             bgplay();
@@ -51,10 +59,7 @@ public class StartGame extends AppCompatActivity {
         findViewById(R.id.player_vs_player_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                             Intent intent =new Intent(StartGame.this,MainActivity.class);
-
-//                            intent.putExtra("mediaPlayerkey", (CharSequence) mediaPlayer);
                             startActivity(intent);
                             stop(v);
 
@@ -65,7 +70,7 @@ public class StartGame extends AppCompatActivity {
 public void bgplay()
 {
     if(mediaPlayer==null) {
-        mediaPlayer = MediaPlayer.create(this, R.raw.bgmusic);
+        mediaPlayer = MediaPlayer.create(this, R.raw.bg_music_tic_tac_toe);
         mediaPlayer.setLooping(true);
     }
     mediaPlayer.start();

@@ -5,6 +5,22 @@
       <entry key="MainActivity">
         <State />
       </entry>
+      <entry key="app">
+        <State>
+          <targetSelectedWithDropDown>
+            <Target>
+              <type value="QUICK_BOOT_TARGET" />
+              <deviceKey>
+                <Key>
+                  <type value="VIRTUAL_DEVICE_PATH" />
+                  <value value="C:\Users\Ideapad\.android\avd\Pixel_XL_API_27_2.avd" />
+                </Key>
+              </deviceKey>
+            </Target>
+          </targetSelectedWithDropDown>
+          <timeTargetWasSelectedWithDropDown value="2024-03-23T14:34:52.601222800Z" />
+        </State>
+      </entry>
     </value>
   </component>
 </project>
